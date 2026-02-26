@@ -67,17 +67,19 @@
         <button onclick="showMessage()">Нажми меня</button>
     </div>
 
-    <script>
-        function showMessage() {
-    const name = document.getElementById("nameInput").value;
+<script>
+    function sayHello() {
+        // Берем значение из поля именно в момент нажатия кнопки
+        const nameInput = document.getElementById('nameInput'); 
+        const name = nameInput.value.trim(); // trim() убирает лишние пробелы
 
-    if (name === "") {
-        alert("Введите имя!");
-    } else {
-        alert("Привет, " + name + "! 🚀");
+        if (name === "") {
+            alert("Пожалуйста, введи свое имя! 😊");
+        } else {
+            alert("Привет, " + name + "! Ты самая лучшая! 🚀❤️");
+        }
     }
-}
-    </script>
+</script>
 
 </body>
 </html>
