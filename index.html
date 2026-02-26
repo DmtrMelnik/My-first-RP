@@ -3,95 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя первая страница</title>
+    <title>Для тебя ❤️</title>
 
     <style>
         body {
             margin: 0;
             background: linear-gradient(135deg, #667eea, #764ba2);
-            font-family: 'Segoe UI', Arial, sans-serif; /* Более современный шрифт */
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
         }
 
-       .card {
+        .card {
             background: white;
             padding: 30px;
             border-radius: 15px;
-            text-align: center;
-            /* На телефонах карточка будет занимать 90% ширины, а на ПК — 400px */
-            width: 90%; 
-            max-width: 400px; 
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
         }
-        
+
         img {
-            max-width: 100%; /* Картинка не будет вылезать за края карточки */
+            width: 100%;
+            max-width: 250px;
             height: auto;
-            border-radius: 10px;
+            border-radius: 15px;
+            margin-bottom: 15px;
         }
-        
-        h1 { margin-bottom: 10px; color: #333; }
-        p { color: gray; margin-bottom: 20px; }
 
         input {
             width: 80%;
-            padding: 12px;
-            margin-bottom: 15px;
+            padding: 10px;
+            margin-top: 15px;
             border-radius: 8px;
             border: 1px solid #ccc;
-            font-size: 16px;
-            outline: none;
         }
-
-        input:focus { border-color: #667eea; } /* Подсветка при клике */
 
         button {
-            padding: 12px 25px;
-            border: none;
-            border-radius: 8px;
+            margin-top: 20px;
+            padding: 10px 20px;
             background: #667eea;
             color: white;
-            font-size: 16px;
-            font-weight: bold;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
-            transition: 0.3s;
             width: 87%;
-        }
-
-        button:hover {
-            background: #5a67d8;
-            transform: translateY(-2px); /* Эффект парения */
         }
     </style>
 </head>
 <body>
 
     <div class="card">
-        <img src="https://images.dog.ceo/breeds/pembroke/n02113023_12833.jpg" alt="Для тебя">
+        <img src="https://m.media-amazon.com/images/I/718b5X7-v0L.jpg" alt="Милый кот">
         <h1>Привет! 🚀</h1>
         <p>Специально для тебя</p>
-        
         <input type="text" id="nameInput" placeholder="Введи своё имя">
         <button onclick="showMessage()">Нажми меня</button>
     </div>
 
     <script>
         function showMessage() {
-    const name = document.getElementById("nameInput").value.trim();
-    const image = document.querySelector(".card img"); // находим твою картинку
-
-    if (name === "") {
-        alert("Пожалуйста, введи имя! 😊");
-    } else {
-        // Меняем картинку на котика или что-то милое при успехе
-        image.src = "https://cataas.com/cat/says/Love?filter=sepia"; 
-        
-        alert("Привет, " + name + "! Ты самый крутой! 😎");
-    }
-}
+            const name = document.getElementById("nameInput").value.trim();
+            if (name === "") {
+                alert("Пожалуйста, введи имя! 😊");
+            } else {
+                alert("Привет, " + name + "! Ты самая крутой! 😎");
+            }
+        }
     </script>
 
 </body>
